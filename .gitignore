@@ -6,3 +6,4 @@ target/
 # logs
 example.log
 example.scala.log
+example.actor.log
