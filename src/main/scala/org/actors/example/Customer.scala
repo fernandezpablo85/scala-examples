@@ -1,11 +1,22 @@
 package org.actors.example
 
-class Customer
-{
-  var served = false;
+import scala.actors._
+
+case object Coffee
+
+class Customer(val id: Int) extends Actor {
   
-  def serve()
-  {
-    served  = true;
+  var served = false;
+
+  def act() = {
+    loop {
+      react {
+        case Coffee => {
+          this.served = true
+          println("Customer "+id+" got a coffee");
+          exit()
+        }
+      }
+    }
   }
 }
