@@ -2,3 +2,7 @@
 .project
 .scala_dependencies
 target/
+
+# logs
+example.log
+example.scala.log

@@ -4,7 +4,7 @@ object Main
 {
   def main (args : Array[String])
   {
-    val log = new Log
+    val log = new SLog
     
     log info "Starting loop"
     log info "going to make a division"
@@ -18,7 +18,7 @@ object Main
       case e : Exception => log error "Problem while making division"
     }
     
-    for (i <- 1 to 100) 
+    for (i <- 1 to 1000)
     {
       log info "inside the loop, iteration"+i
     }
