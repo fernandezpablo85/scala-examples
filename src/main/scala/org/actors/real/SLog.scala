@@ -2,7 +2,7 @@ package org.actors.real
 
 import java.io._
 
-class SLog
+class SLog extends ILog
 {
   val f = new File("./example.scala.log")
 

@@ -2,7 +2,7 @@ package org.actors.real;
 
 import java.io.*;
 
-public class Log
+public class Log implements ILog
 {
   private final File f;
   

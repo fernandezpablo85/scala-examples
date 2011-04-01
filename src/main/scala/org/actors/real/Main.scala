@@ -4,8 +4,11 @@ object Main
 {
   def main (args : Array[String])
   {
-    val log = new SLog
-    
+    excerciseLog (new SLog)
+  }
+
+  def excerciseLog (log : ILog)
+  {
     log info "Starting loop"
     log info "going to make a division"
     
