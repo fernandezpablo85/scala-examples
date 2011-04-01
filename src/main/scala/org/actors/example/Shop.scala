@@ -23,6 +23,6 @@ class Shop (val name : String) extends Actor
 
 object Shop
 {
-  val WELCOME_MESSAGE = "Welcome to %s customer number %s"
-  val NOT_ALLOWED_MESSAGE = "Only customers are allowed in %s"
+  val WELCOME_MESSAGE = "[shop] Welcome to %s customer number %s"
+  val NOT_ALLOWED_MESSAGE = "[shop] Only customers are allowed in %s. Sorry"
 }

@@ -13,7 +13,7 @@ class Customer(val id: Int) extends Actor {
       react {
         case Coffee => {
           this.served = true
-          println("Customer "+id+" got a coffee");
+          println("[customer] Customer "+id+" got a coffee");
           exit()
         }
       }

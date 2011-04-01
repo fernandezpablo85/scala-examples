@@ -7,8 +7,12 @@ class Barista extends Actor
   def act() = {
     loop {
       react {
-        case c : Customer => c ! Coffee
-        case _ => println("Can only prepare coffee for a customer, sorry")
+        case c : Customer =>
+        {
+          println("[barista] Preparing coffee for costumer "+c.id)
+          c ! Coffee
+        }
+        case _ => println("[barista] Can only prepare coffee for a customer, sorry")
       }
     }
   }

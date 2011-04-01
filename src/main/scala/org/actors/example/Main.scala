@@ -4,11 +4,11 @@ case object Pet
 
 object Main
 {
-  val MAX_CLIENTS = 25;
+  val MAX_CLIENTS = 15;
   
   def main (args : Array[String])
   {
-    println("Starting simulation");
+    println("[Main] Starting simulation");
 
     // Generate Customer actors and start them
     val customers = generateCustormers();
@@ -29,7 +29,7 @@ object Main
     import java.util.Random;
     
     val total = new Random().nextInt(Main.MAX_CLIENTS);
-    println("Creating "+total+" customers");
+    println("[Main] Creating "+total+" customers");
 
     (1 to total).map(new Customer(_))
   }
