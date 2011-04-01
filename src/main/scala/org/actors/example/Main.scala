@@ -1,5 +1,7 @@
 package org.actors.example
 
+import java.util.Random;
+
 case object Pet
 
 object Main
@@ -19,15 +21,16 @@ object Main
     shop.start;
 
     // Send customers to the shop
-    customers foreach { customer => shop ! customer }
+    customers foreach { customer =>
+      Thread.sleep(new Random().nextInt(1000))
+      shop ! customer
+    }
 
     // Send a pet to the shop
     shop ! Pet
   }
   
   private def generateCustormers() = {
-    import java.util.Random;
-    
     val total = new Random().nextInt(Main.MAX_CLIENTS);
     println("[Main] Creating "+total+" customers");
 
