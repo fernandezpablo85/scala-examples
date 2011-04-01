@@ -1,5 +1,7 @@
 package org.actors.example
 
+case object Pet
+
 object Main
 {
   val MAX_CLIENTS = 25;
@@ -15,6 +17,12 @@ object Main
     // Create the shop and put it to work
     val shop = new Shop("Starbucks")
     shop.start;
+
+    // Send customers to the shop
+    customers foreach { customer => shop ! customer }
+
+    // Send a pet to the shop
+    shop ! Pet
   }
   
   private def generateCustormers() = {
