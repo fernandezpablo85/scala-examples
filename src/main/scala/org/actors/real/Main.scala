@@ -1,10 +1,14 @@
 package org.actors.real
 
+import com.google.inject._
+
 object Main 
 {
   def main (args : Array[String])
   {
-    excerciseLog (new SLog)
+    val injector = Guice.createInjector(new org.actors.real.Module)
+    val service = injector.getInstance(classOf[SampleService])
+    service.print()
   }
 
   def excerciseLog (log : ILog)
