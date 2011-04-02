@@ -1,6 +1,7 @@
 package org.actors.example
 
 import scala.actors._
+import scala.actors.Actor._
 
 class Shop (val name : String) extends Actor
 {

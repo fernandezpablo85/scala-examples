@@ -1,6 +1,7 @@
 package org.actors.real
 
 import scala.actors._
+import scala.actors.Actor._
 
 import java.io._
 
