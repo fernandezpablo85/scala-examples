@@ -1,9 +1,17 @@
+# eclipse-generated files
 .classpath
 .project
+
+# scala-ide (eclipse) generated files
 .scala_dependencies
+
+# binaries
 target/
 
 # logs
 example.log
 example.scala.log
 example.actor.log
+
+# sbt-generated files
+project/boot
