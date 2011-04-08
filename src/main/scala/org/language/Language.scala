@@ -17,6 +17,7 @@ object LanguageMain
   {
     testClosures
     testImplicits
+    testTailRecursion
   } 
 
   def testImplicits ()
@@ -32,6 +33,24 @@ object LanguageMain
       file println "hola archivito"
       file println "estoy usando "+lang+" para escribirte"
     } 
+  }
+
+  def testTailRecursion ()
+  {
+    explodeIn(10)
+  }
+
+  def explodeIn (time : Int)
+  {
+    if (time == 0)
+    {
+      throw new Exception("Boom")
+    }
+    else
+    {
+      explodeIn(time - 1)
+    }
+    println("Should never reach here")
   }
 
   def using (name : String)(op : PrintWriter => Unit) {
