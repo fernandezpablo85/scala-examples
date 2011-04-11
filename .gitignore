@@ -16,3 +16,4 @@ example.actor.log
 # sbt-generated files
 project/boot
 lib_managed
+project/plugins/src_managed
